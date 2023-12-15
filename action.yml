@@ -26,6 +26,9 @@ inputs:
     description: 'Check if a cache entry exists for the given input(s) (key, restore-keys) without downloading the cache'
     default: 'false'
     required: false
+  endpoint:
+    description: 'An optional endpoint to be used instead of the internal GitHub Actions remote cache'
+    required: false
   token:
     description: 'An optional authorization token to be used when sending requests to the cache endpoint'
     required: false
