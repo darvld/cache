@@ -26,6 +26,9 @@ inputs:
     description: 'Check if a cache entry exists for the given input(s) (key, restore-keys) without downloading the cache'
     default: 'false'
     required: false
+  token:
+    description: 'An optional authorization token to be used when sending requests to the cache endpoint'
+    required: false
 outputs:
   cache-hit:
     description: 'A boolean value to indicate an exact match was found for the primary key'

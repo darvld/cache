@@ -56,10 +56,15 @@ async function saveImpl(stateProvider: IStateProvider): Promise<number | void> {
             Inputs.EnableCrossOsArchive
         );
 
+        const token = core.getInput(Inputs.Token);
+
         cacheId = await cache.saveCache(
             cachePaths,
             primaryKey,
-            { uploadChunkSize: utils.getInputAsInt(Inputs.UploadChunkSize) },
+            {
+                uploadChunkSize: utils.getInputAsInt(Inputs.UploadChunkSize),
+                token: token
+            },
             enableCrossOsArchive
         );
 
